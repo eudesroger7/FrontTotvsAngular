@@ -1,0 +1,24 @@
+<div class="input-search-container" [ngClass]="{'show-options': inputFocused || optionsOvered}">
+  <div class="input-container">
+    <input placeholder="pesquisar"
+           [(ngModel)]="value"
+           (keyup)="onValueChange($event)"
+           (focus)="inputFocused = true"
+           (blur)="inputFocused = false"
+           (keyup.enter)="emitSearch()"/>
+    <button (click)="emitSearch()">
+      <i nz-icon nzType="search" nzTheme="outline"></i>
+    </button>
+  </div>
+
+  <div class="options"
+       (mouseover)="optionsOvered = true"
+       (mouseleave)="optionsOvered = false">
+    <div class="option"
+         *ngFor="let option of options"
+         (click)="onSelectOption(option)">
+      {{option.login}}
+    </div>
+  </div>
+
+</div>

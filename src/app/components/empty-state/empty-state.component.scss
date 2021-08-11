@@ -1,0 +1,28 @@
+:host {
+  width: 100%;
+}
+
+.empty-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-top: 80px;
+
+  span {
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 120%;
+    color: rgba(0,0,0,.3);
+  }
+
+  ::ng-deep i {
+    svg {
+      $size: 80px;
+      width: $size;
+      height: $size;
+      color: rgba(0,0,0,.15);
+    }
+  }
+}

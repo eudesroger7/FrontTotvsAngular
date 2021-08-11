@@ -1,0 +1,16 @@
+<div class="main-container">
+  <div class="header">
+    <div class="container content">
+      <img class="logo" src="/assets/images/logo.png" alt="TOTVS" />
+      <app-input-search (onSearch)="onSearch($event)"></app-input-search>
+    </div>
+  </div>
+  <div class="list">
+    <div class="container content">
+      <app-empty-state *ngIf="repositories?.length === 0"></app-empty-state>
+      <div *ngFor="let repository of repositories">
+        {{repository.name}}
+      </div>
+    </div>
+  </div>
+</div>
