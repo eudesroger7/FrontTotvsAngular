@@ -1,0 +1,11 @@
+$blueLight: #507bdf;
+$blueDark: #223adc;
+$bannerGradient: $blueLight, $blueDark;
+$yellow: #fcdb67;
+
+@mixin gradient($deg, $list) {
+  background: -webkit-linear-gradient($deg, $list);
+  background: -moz-linear-gradient($deg, $list);
+  background: -o-linear-gradient($deg, $list);
+  background: linear-gradient($deg, $list);
+}
