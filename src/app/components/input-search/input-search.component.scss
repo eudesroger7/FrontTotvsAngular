@@ -9,6 +9,10 @@ $textColor: #acacac;
   z-index: 3;
 }
 
+::placeholder {
+  color: $textColor;
+}
+
 .input-search-container {
   height: 45px;
   overflow-y: hidden;
@@ -40,7 +44,11 @@ $textColor: #acacac;
     outline: none;
     padding: 0 20px;
     border: none;
-    background-color: #f7f7f7;
+    background-color: #ffffff;
+
+    &:focus {
+      background-color: #f7f7f7;
+    }
   }
 
   ::ng-deep i {

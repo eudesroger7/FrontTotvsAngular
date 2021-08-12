@@ -1,6 +1,22 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$front-totvs-angular-primary: mat-palette($mat-indigo);
+$front-totvs-angular-accent: mat-palette($mat-pink, A200, A100, A400);
+$front-totvs-angular-warn: mat-palette($mat-red);
+$front-totvs-angular-theme: mat-light-theme((
+  color: (
+    primary: $front-totvs-angular-primary,
+    accent: $front-totvs-angular-accent,
+    warn: $front-totvs-angular-warn,
+  )
+));
+@include angular-material-theme($front-totvs-angular-theme);
+
 html, body {
   padding: 0;
   margin: 0;
+  //font-family: sans-serif;;
+  height: 100%;
 }
 
 .container {
@@ -13,4 +29,8 @@ html, body {
   outline: none;
   background: none;
   cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
 }

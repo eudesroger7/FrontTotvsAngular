@@ -1,0 +1,14 @@
+<h1 class="title" *ngIf="data?.title">{{data?.title}}</h1>
+<p class="description" *ngIf="data?.description">{{data?.description}}</p>
+<div class="actions">
+  <button class="btn"
+          *ngIf="data?.dismissButton"
+          (click)="onDismiss()">
+    {{data?.dismissButton?.label}}
+  </button>
+  <button class="btn"
+          *ngIf="data?.confirmButton"
+          (click)="onConfirm()">
+    {{data?.confirmButton?.label}}
+  </button>
+</div>
