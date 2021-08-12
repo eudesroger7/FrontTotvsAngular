@@ -1,0 +1,16 @@
+<div class="card-list-container" [ngClass]="{show: open}">
+  <div class="card-header">
+    <img class="avatar" [src]="repository?.owner?.avatar_url" alt="avatar" />
+    <span class="title">{{repository.name}}</span>
+    <button class="btn btn-toggle" (click)="open = !open">
+      {{open ? 'Ocultar' : 'Ver'}} detalhe da ação
+      <i nz-icon [nzType]="open ? 'up' : 'down'" nzTheme="outline"></i>
+    </button>
+  </div>
+  <div class="card-content">
+    <p class="description">{{repository.description}}</p>
+    <button class="btn btn-action">
+      Ver mais
+    </button>
+  </div>
+</div>

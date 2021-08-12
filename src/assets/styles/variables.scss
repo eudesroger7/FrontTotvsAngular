@@ -2,6 +2,7 @@ $blueLight: #507bdf;
 $blueDark: #223adc;
 $bannerGradient: $blueLight, $blueDark;
 $yellow: #fcdb67;
+$purple: #9a78dc;
 
 @mixin gradient($deg, $list) {
   background: -webkit-linear-gradient($deg, $list);

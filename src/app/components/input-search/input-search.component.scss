@@ -26,12 +26,10 @@ $textColor: #acacac;
 
   button {
     width: 80px;
-    border: none;
     background-color: $yellow;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
   }
 
   input {

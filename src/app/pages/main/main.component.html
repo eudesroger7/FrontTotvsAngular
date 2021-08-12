@@ -6,11 +6,11 @@
     </div>
   </div>
   <div class="list">
-    <div class="container content">
+    <div class="container">
+      <p class="title">Resultado da busca</p>
       <app-empty-state *ngIf="repositories?.length === 0"></app-empty-state>
-      <div *ngFor="let repository of repositories">
-        {{repository.name}}
-      </div>
+      <app-card-list *ngFor="let repository of repositories"
+        [repository]="repository"></app-card-list>
     </div>
   </div>
 </div>

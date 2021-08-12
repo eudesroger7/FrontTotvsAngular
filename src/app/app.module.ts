@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmptyStateComponent } from './components/empty-state/empty-state.component';
+import { CardListComponent } from './components/card-list/card-list.component';
 
 registerLocaleData(en);
 
@@ -22,7 +23,8 @@ registerLocaleData(en);
     AppComponent,
     MainComponent,
     InputSearchComponent,
-    EmptyStateComponent
+    EmptyStateComponent,
+    CardListComponent
   ],
   imports: [
     BrowserModule,
