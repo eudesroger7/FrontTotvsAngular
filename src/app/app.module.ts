@@ -20,6 +20,8 @@ import { EmptyStateComponent } from './components/empty-state/empty-state.compon
 import { CardListComponent } from './components/card-list/card-list.component';
 import { InputSearchComponent } from './components/input-search/input-search.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 registerLocaleData(en);
 
@@ -52,7 +54,13 @@ const materialModules = [
     HttpClientModule,
     BrowserAnimationsModule,
     CommonModule,
-    ...materialModules
+    ...materialModules,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
